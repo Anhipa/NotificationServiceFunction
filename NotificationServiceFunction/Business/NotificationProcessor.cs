@@ -50,7 +50,7 @@ namespace NotificationServiceFunction.Business
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Processing failed: {ex.Message}");
+                _logger.LogError($"Processing failed.", ex);
                 throw; //Re throw exception to insert message into poison queue.
             }
         }
